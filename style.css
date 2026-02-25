@@ -11,7 +11,7 @@ body {
 
 .header {
     height: 100vh;
-    background-image: url(images/13.png);
+    background-image: url(13.png); /* Убрал images/ */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -163,7 +163,7 @@ body {
 /* === ФУТЕР === */
 .footer {
     height: 100vh;
-    background-image: url(./images/7.png);
+    background-image: url(7.png); /* Убрал ./images/ */
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
