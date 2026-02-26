@@ -11,7 +11,7 @@ body {
 
 .header {
     height: 100vh;
-    background-image: url(images/13.png); /* Добавил images/ */
+    background-image: url(images/13.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -77,7 +77,7 @@ body {
 .card__image {
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 0;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -87,20 +87,20 @@ body {
     display: block;
 }
 
-/* === ИКОНКИ - ПРОСТО СИЛУЭТЫ, БЕЗ ФОНА === */
+/* === ИКОНКИ - КРУПНЫЕ, ШИРОКИЕ, С ЖИРНОЙ ОБВОДКОЙ === */
 .card__actions {
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    bottom: 20px;
+    right: 20px;
     display: flex;
-    gap: 12px;
+    gap: 15px;
     z-index: 3;
 }
 
 .card__like,
 .card__favorite {
-    width: 28px;
-    height: 28px;
+    width: 44px;
+    height: 44px;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -108,21 +108,27 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.7;
 }
 
+/* Иконка лайка - крупная, широкая, жирная обводка */
 .card__like {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28px" height="28px"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 22" fill="rgba(255,255,255,0.4)" stroke="white" stroke-width="2.8" width="40px" height="36px"><path d="M13 20.5l-2-1.7C5.5 14.5 2 11 2 7 2 4 5 2 8.5 2c2 0 3.8 1 4.8 2.3C14.3 3 16.2 2 18.5 2 22 2 25 4 25 7c0 4-3.5 7.5-9 11.8l-2 1.7z"/></svg>');
 }
 
+/* Иконка закладки - крупная, широкая, жирная обводка */
 .card__favorite {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28px" height="28px"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 26" fill="rgba(255,255,255,0.4)" stroke="white" stroke-width="2.8" width="36px" height="42px"><path d="M18 3H4c-1.5 0-2.8 1.2-2.8 2.8v17.4l8.8-3.5 8.8 3.5V5.8C18.8 4.2 17.5 3 16 3z"/></svg>');
 }
 
-.card__like:hover,
-.card__favorite:hover {
-    opacity: 1;
+/* HOVER - становятся полностью белыми */
+.card__like:hover {
     transform: scale(1.15);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 22" fill="white" stroke="white" stroke-width="0" width="40px" height="36px"><path d="M13 20.5l-2-1.7C5.5 14.5 2 11 2 7 2 4 5 2 8.5 2c2 0 3.8 1 4.8 2.3C14.3 3 16.2 2 18.5 2 22 2 25 4 25 7c0 4-3.5 7.5-9 11.8l-2 1.7z"/></svg>');
+}
+
+.card__favorite:hover {
+    transform: scale(1.15);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 26" fill="white" stroke="white" stroke-width="0" width="36px" height="42px"><path d="M18 3H4c-1.5 0-2.8 1.2-2.8 2.8v17.4l8.8-3.5 8.8 3.5V5.8C18.8 4.2 17.5 3 16 3z"/></svg>');
 }
 
 /* === OVERLAY (ЗАТЕМНЕНИЕ) === */
@@ -160,7 +166,7 @@ body {
 /* === ФУТЕР === */
 .footer {
     height: 100vh;
-    background-image: url(images/7.png); /* Добавил images/ */
+    background-image: url(images/7.png);
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -212,7 +218,7 @@ body {
     
     .card__like,
     .card__favorite {
-        width: 24px;
-        height: 24px;
+        width: 36px;
+        height: 36px;
     }
 }
