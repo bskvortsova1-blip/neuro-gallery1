@@ -110,12 +110,12 @@ body {
     background-position: center;
 }
 
-/* Иконка лайка - крупная, широкая, жирная обводка */
+/* Иконка лайка */
 .card__like {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 22" fill="rgba(255,255,255,0.4)" stroke="white" stroke-width="2.8" width="40px" height="36px"><path d="M13 20.5l-2-1.7C5.5 14.5 2 11 2 7 2 4 5 2 8.5 2c2 0 3.8 1 4.8 2.3C14.3 3 16.2 2 18.5 2 22 2 25 4 25 7c0 4-3.5 7.5-9 11.8l-2 1.7z"/></svg>');
 }
 
-/* Иконка закладки - крупная, широкая, жирная обводка */
+/* Иконка закладки */
 .card__favorite {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 26" fill="rgba(255,255,255,0.4)" stroke="white" stroke-width="2.8" width="36px" height="42px"><path d="M18 3H4c-1.5 0-2.8 1.2-2.8 2.8v17.4l8.8-3.5 8.8 3.5V5.8C18.8 4.2 17.5 3 16 3z"/></svg>');
 }
@@ -150,13 +150,14 @@ body {
 
 .card__text {
     color: white;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
-    padding: 12px 24px;
-    border: 2px solid white;
-    border-radius: 40px;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(2px);
+    /* Текст просто белый, без обводки и фона */
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    backdrop-filter: none;
 }
 
 .card__image:hover .card__overlay {
@@ -220,5 +221,9 @@ body {
     .card__favorite {
         width: 36px;
         height: 36px;
+    }
+    
+    .card__text {
+        font-size: 20px; /* Чуть меньше на мобилках */
     }
 }
