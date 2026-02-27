@@ -152,12 +152,16 @@ body {
     color: white;
     font-size: 24px;
     font-weight: 400;
-    /* Текст просто белый, без обводки и фона */
     padding: 0;
     border: none;
     border-radius: 0;
     background-color: transparent;
     backdrop-filter: none;
+    text-align: center;
+    width: 90%;
+    max-width: 260px;
+    line-height: 1.4;
+    word-wrap: break-word;
 }
 
 .card__image:hover .card__overlay {
@@ -224,6 +228,7 @@ body {
     }
     
     .card__text {
-        font-size: 20px; /* Чуть меньше на мобилках */
+        font-size: 20px;
+        width: 95%;
     }
 }
